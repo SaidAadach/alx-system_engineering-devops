@@ -1,2 +1,8 @@
 #!/bin/bash
-cp -u *.htm ..
+parent_dir=$(dirname "$(pwd)")
+current_dir=$(basename "$(pwd)")
+for file in *.html; do
+    if [[ ! -e "$parent_dir/$current_dir/$file" || "$file" -nt "$parent_dir/$current_dir/$file" ]]; then
+        cp "$file" "$parent_dir/$current_dir/"
+    fi
+done
