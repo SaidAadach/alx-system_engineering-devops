@@ -1,1 +1,1 @@
-loops and condition devops
+loop condition and parsing in bash scripts
