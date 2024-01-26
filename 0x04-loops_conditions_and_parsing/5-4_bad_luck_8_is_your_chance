@@ -1,18 +1,15 @@
 #!/usr/bin/env bash
-# A script that loops through 1 to 10 using while
+#As the chinese say,
+#4 bad luck, 8 is your chance
 
-i=1
-
-while [ $i -le 10 ]
-do
-    if [ $i -eq 4 ]
-    then
-        echo "bad luck"
-    elif [ $i -eq 8 ]
-    then
-        echo "good luck"
+luck=1;
+while [ "$luck" -le 10 ]; do
+    if [ "$luck" == 4 ]; then
+        echo "bad luck";
+    elif [ "$luck" == 8 ]; then
+        echo "good luck";
     else
-        echo "Best School"
+        echo "Best School";
     fi
-    ((i++))
+    luck=$((luck + 1));
 done
