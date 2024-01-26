@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-#print "Best School" to stdout using while-loop
+# A script that displays Best School 10 times using while
 
-printed=0;
-while [ "$printed" -lt 10 ]; do
-    echo "Best School";
-    printed=$((printed + 1));
+i=1
+
+while [ $i -le 10 ]
+do
+    echo "Best School"
+    ((i++))
 done

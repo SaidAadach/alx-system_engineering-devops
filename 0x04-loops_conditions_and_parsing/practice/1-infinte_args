@@ -1,6 +1,0 @@
-#!/bin/bash
-# Process unknown arguments
-for command in "$@"; do
-    echo -e "Processing $command\t";
-    $command;
-done;
