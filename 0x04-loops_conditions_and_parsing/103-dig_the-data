@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# a script that prints all the ip address with their status code desciending order
-awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn
+# Groups visitors by IP and HTTP status code, and displays this data.
+
+awk '{ print $1,$9 }' apache-access.log | sort | uniq -c | sort -nr
